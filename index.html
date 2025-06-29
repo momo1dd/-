@@ -1,4 +1,14 @@
 <!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Untitled</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
@@ -1403,42 +1413,62 @@
 
 <!-- 4. 혼자 하기의 한계 (이미지 + 강조 텍스트) -->
 <section class="failure-section" style="background:#0a0a0a; color:white; padding:80px 20px;">
+  <!-- 헤더 텍스트 -->
   <div style="max-width:800px; margin:0 auto 60px; text-align:center;">
     <p style="font-size:3rem; font-weight:900; margin-bottom:20px; color:var(--accent);">
       반대로!!
     </p>
-    <p style="font-size:2rem; font-weight:700; margin-bottom:10px; color:white; line-height:1.4;">
+    <p style="font-size:2rem; font-weight:700; margin-bottom:10px; line-height:1.4;">
       유튜브로 수익 내보겠다고
     </p>
-    <p style="font-size:1.6rem; font-weight:500; opacity:0.8; line-height:1.8; color:white;">
+    <p style="font-size:1.6rem; font-weight:500; opacity:0.8; line-height:1.8;">
       혼자 하려던 분들은 대부분<br>
       이런 문제를 겪게 됩니다.
     </p>
   </div>
-  <div class="container reveal" style="max-width:1200px; margin:0 auto;">
-    <div style="
+
+  <!-- 2×2 그리드, 이미지 60%/max-180px -->
+  <div class="container reveal" style="max-width:900px; margin:0 auto;">
+    <div class="reveal" style="
         display: grid;
-        grid-template-columns: repeat(2, minmax(250px, 1fr));
+        grid-template-columns: repeat(2, 1fr);
         gap: 40px;
+        margin-bottom: 40px;
         text-align: center;
       ">
       <!-- 카드 1 -->
-      <div class="card">
-        <img src="https://i.ibb.co/p6xCZDtL/Chat-GPT-Image-2025-6-28-01-17-17.png"
-             alt="3일 밤새워 영상 만들었는데..."
-             style="width:80%; max-width:300px; margin:0 auto 20px; display:block; border-radius:12px;" />
+      <div>
+        <img
+          src="https://i.ibb.co/p6xCZDtL/Chat-GPT-Image-2025-6-28-01-17-17.png"
+          alt="3일 밤새워 영상 만들었는데…"
+          style="
+            width: 60%;
+            max-width: 180px;
+            display: block;
+            margin: 0 auto 15px;
+            border-radius: 12px;
+          "
+        />
         <p style="font-size:1.6rem; font-weight:700; margin-bottom:10px;">
           3일 밤새워 영상 만들었는데…
         </p>
-        <p style="font-size:1.4rem; font-weight:500; opacity:0.9;">
+        <p style="font-size:1.4rem; font-weight:500; opacity:0.9; line-height:1.4;">
           조회수 12, 구독자 0명입니다
         </p>
       </div>
       <!-- 카드 2 -->
-      <div class="card">
-        <img src="https://i.ibb.co/JX9134H/Chat-GPT-Image-2025-6-28-01-16-59.png"
-             alt="영상은 만들었는데..."
-             style="width:80%; max-width:300px; margin:0 auto 20px; display:block; border-radius:12px;" />
+      <div>
+        <img
+          src="https://i.ibb.co/JX9134H/Chat-GPT-Image-2025-6-28-01-16-59.png"
+          alt="영상은 만들었는데…"
+          style="
+            width: 60%;
+            max-width: 180px;
+            display: block;
+            margin: 0 auto 15px;
+            border-radius: 12px;
+          "
+        />
         <p style="font-size:1.6rem; font-weight:700; margin-bottom:10px;">
           영상은 만들었는데…
         </p>
@@ -1448,22 +1478,38 @@
         </p>
       </div>
       <!-- 카드 3 -->
-      <div class="card">
-        <img src="https://i.ibb.co/pvXXCKrZ/Chat-GPT-Image-2025-6-28-02-47-58.png"
-             alt="대본은 챗GPT가 써준다는데..."
-             style="width:80%; max-width:300px; margin:0 auto 20px; display:block; border-radius:12px;" />
+      <div>
+        <img
+          src="https://i.ibb.co/pvXXCKrZ/Chat-GPT-Image-2025-6-28-02-47-58.png"
+          alt="대본은 챗GPT가 써준다는데…"
+          style="
+            width: 60%;
+            max-width: 180px;
+            display: block;
+            margin: 0 auto 15px;
+            border-radius: 12px;
+          "
+        />
         <p style="font-size:1.6rem; font-weight:700; margin-bottom:10px;">
           대본은 챗GPT가 써준다는데…
         </p>
-        <p style="font-size:1.4rem; font-weight:500; opacity:0.9;">
+        <p style="font-size:1.4rem; font-weight:500; opacity:0.9; line-height:1.4;">
           도대체 어떤 걸 써야 되는지도 감이 안 잡혀요
         </p>
       </div>
       <!-- 카드 4 -->
-      <div class="card">
-        <img src="https://i.ibb.co/JRMQ01b6/Chat-GPT-Image-2025-6-28-02-48-58.png"
-             alt="다음 영상은 뭘 해야 하죠?"
-             style="width:80%; max-width:300px; margin:0 auto 20px; display:block; border-radius:12px;" />
+      <div>
+        <img
+          src="https://i.ibb.co/JRMQ01b6/Chat-GPT-Image-2025-6-28-02-48-58.png"
+          alt="다음 영상은 뭘 해야 하죠?"
+          style="
+            width: 60%;
+            max-width: 180px;
+            display: block;
+            margin: 0 auto 15px;
+            border-radius: 12px;
+          "
+        />
         <p style="font-size:1.6rem; font-weight:700; margin-bottom:10px;">
           다음 영상은 뭘 해야 하죠?
         </p>
@@ -1476,7 +1522,7 @@
   </div>
 </section>
 
-<!-- 5. 포기 패턴 & 해결책 제시 섹션 -->
+<!-- 5. 포기 패턴 & 해결책 제시 섹션 (이미지 축소 버전) -->
 <section class="hook-section" style="background: #0a0a0a; color: var(--light); padding: 100px 20px;">
   <div class="container" style="max-width: 900px; margin: 0 auto; text-align: center;">
     <!-- 후킹 타이틀 -->
@@ -1510,8 +1556,8 @@
     <!-- 문제 리스트: 2×2 그리드 -->
     <div class="reveal" style="
         display: grid;
-        grid-template-columns: repeat(2, minmax(200px, 1fr));
-        gap: 60px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
         margin-bottom: 60px;
       ">
       <!-- 1) 채널 주제 고민 -->
@@ -1519,7 +1565,7 @@
         <img
           src="https://i.ibb.co/bj3vV2Jr/Chat-GPT-Image-2025-6-29-06-18-20.png"
           alt="채널 주제 고민"
-          style="width:80%; max-width:300px; display:block; margin:0 auto 20px; border-radius:12px;"
+          style="width:60%; max-width:180px; display:block; margin:0 auto 15px; border-radius:12px;"
         />
         <p style="font-size:1.6rem; font-weight:700;">채널 주제 고민</p>
       </div>
@@ -1528,7 +1574,7 @@
         <img
           src="https://i.ibb.co/0pbfDzp4/Chat-GPT-Image-2025-6-29-06-18-31.png"
           alt="대본 작성 막막함"
-          style="width:80%; max-width:300px; display:block; margin:0 auto 20px; border-radius:12px;"
+          style="width:60%; max-width:180px; display:block; margin:0 auto 15px; border-radius:12px;"
         />
         <p style="font-size:1.6rem; font-weight:700;">대본 작성 막막함</p>
       </div>
@@ -1537,7 +1583,7 @@
         <img
           src="https://i.ibb.co/FGqTFjt/Chat-GPT-Image-2025-6-29-06-19-43.png"
           alt="GPT 사용 어려움"
-          style="width:80%; max-width:300px; display:block; margin:0 auto 20px; border-radius:12px;"
+          style="width:60%; max-width:180px; display:block; margin:0 auto 15px; border-radius:12px;"
         />
         <p style="font-size:1.6rem; font-weight:700;">GPT 사용 어려움</p>
       </div>
@@ -1546,13 +1592,13 @@
         <img
           src="https://i.ibb.co/VWsfJ4j4/Chat-GPT-Image-2025-6-29-06-20-57.png"
           alt="영상 편집 부담"
-          style="width:80%; max-width:300px; display:block; margin:0 auto 20px; border-radius:12px;"
+          style="width:60%; max-width:180px; display:block; margin:0 auto 15px; border-radius:12px;"
         />
         <p style="font-size:1.6rem; font-weight:700;">영상 편집 부담</p>
       </div>
     </div>
 
-    <!-- 해결책 제시 (줄바꿈 포함) -->
+    <!-- 해결책 제시 -->
     <p class="reveal" style="
         font-size: 1.6rem;
         line-height: 1.8;
@@ -1566,6 +1612,7 @@
     </p>
   </div>
 </section>
+
 
 <!-- 7. 강사 프로필 섹션 (수정본) -->
 <section class="instructor">
@@ -2742,5 +2789,9 @@
             }
         }
     </script>
+</body>
+</html>
+<!-- partial -->
+  
 </body>
 </html>
