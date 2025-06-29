@@ -2621,33 +2621,35 @@
   }
 </style>
 
-<!-- 플로팅 신청 버튼 -->
-<a href="#"
-   class="floating-apply-button cta-button cta-pulse"
-   onclick="showModal()"
-   style="
-     /* 위치 중앙 정렬 */
-     right: auto;
-     left: 50%;
-     transform: translateX(-50%);
-     bottom: 30px;
+<!-- ===== 플로팅 신청 버튼 & 스타일 (통째로 붙여넣기) ===== -->
+<style>
+  .floating-apply-button {
+    position: fixed !important;
+    bottom: 30px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    z-index: 999 !important;
 
-     /* 크기 자동 조정 */
-     width: auto !important;
-     height: auto !important;
+    /* 버튼 크기 고정 */
+    width: auto !important;
+    max-width: 360px !important;
+    white-space: nowrap !important;
+    text-align: center !important;
 
-     /* 기존 패딩 제거 (원한다면) */
-     padding: 0 !important;
+    /* 기존 CTA padding 강제 재적용 */
+    padding: 16px 48px !important;
+  }
+</style>
 
-     /* CTA 버튼 패딩 사용 */
-     font-size: 1.5rem;
-     padding: 30px 80px;
-   ">
-  💫 인생을 바꾸는 첫걸음, 지금 시작하세요
+<a
+  href="#"
+  class="floating-apply-button cta-button cta-pulse"
+  onclick="showModal()"
+>
+  인생을 바꾸는 첫걸음, 지금 시작하세요
 </a>
-/div>
+<!-- ===== 여기까지 복사해서 기존 버튼 있던 곳에 붙여넣기 ===== -->
 
-    
     <!-- 모달 -->
     <div class="modal" id="applicationModal">
         <div class="modal-content">
