@@ -2653,6 +2653,67 @@
             </p>
         </div>
     </section>
+<!-- 환불 정책 & 사업자 정보 섹션 -->
+<section class="refund-policy" style="background: #000; color: #fff; padding: 60px 20px; font-family: 'Noto Sans KR', sans-serif;">
+  <div class="container" style="max-width: 800px; margin: 0 auto;">
+
+    <h2 style="font-size: 2.5rem; font-weight: 700; color: var(--accent); text-align: center; margin-bottom: 20px;">
+      🔄 환불 정책
+    </h2>
+    <p style="font-size: 1.2rem; line-height: 1.8; text-align: center; margin-bottom: 30px;">
+      결제 완료한 모든 수강생은 수강 시작일로부터 <strong>10일 이내</strong>에<br>
+      강의 시청 여부와 관계없이 <strong>전액 환불</strong>을 요청할 수 있습니다.
+    </p>
+
+    <h3 style="font-size: 1.5rem; font-weight: 600; color: var(--accent); margin-bottom: 10px;">
+      환불 절차
+    </h3>
+    <ul style="list-style: none; padding-left: 1em; margin-bottom: 40px; font-size: 1.1rem; line-height: 1.6;">
+      <li>• 상담카톡으로 성명, 결제일, 연락처, 은행명·계좌번호 전송</li>
+      <li>• 요청일로부터 <strong>5영업일 이내</strong>에 환불 완료 안내</li>
+    </ul>
+
+    <!-- 사업자 정보 토글 버튼 -->
+    <div style="text-align: center; margin-top: 40px;">
+      <button id="bizInfoBtn" style="
+        background: var(--accent);
+        color: #000;
+        padding: 12px 24px;
+        font-size: 1.1rem;
+        font-weight: 700;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+      ">
+        사업자정보확인
+      </button>
+    </div>
+
+    <!-- 숨겨진 사업자 정보 -->
+    <div id="bizInfo" style="display: none; margin-top: 20px; padding: 20px; background: rgba(255,255,255,0.1); border-radius: 10px; font-size: 1.1rem; line-height: 1.6;">
+      <p>상호명: 비전업플랜</p>
+      <p>대표자명: 장효준</p>
+      <p>사업자등록번호: 109-52-44129</p>
+      <p>사업장 주소: 광주광역시 북구 문화소통로302번길60(두암동)</p>
+      <p>유선번호: 010-9859-2300</p>
+    </div>
+
+  </div>
+
+  <script>
+    document.getElementById('bizInfoBtn').addEventListener('click', function() {
+      var info = document.getElementById('bizInfo');
+      if (info.style.display === 'none' || info.style.display === '') {
+        info.style.display = 'block';
+        this.textContent = '사업자정보닫기';
+      } else {
+        info.style.display = 'none';
+        this.textContent = '사업자정보확인';
+      }
+    });
+  </script>
+</section>
+
     
 <style>
   .floating-apply-button {
