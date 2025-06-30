@@ -1944,7 +1944,7 @@
         </p>
       </div>
       
-      <!-- “단순 강의가 아니다” 강조 + 2x2 그리드 확대 -->
+      <!-- “단순 강의가 아닙니다” 강조 + 2×2 그리드 -->
       <div class="not-just-lecture">
         <p class="emphasis" style="font-size: 1.5rem; font-weight: 700; color: #fff; margin-bottom: 40px;">
           이건 단순한 강의가 아닙니다.
@@ -1968,7 +1968,20 @@
           </div>
         </div>
       </div>
-      
+
+<!-- 페이지 맨 아래, </body> 바로 직전에 붙여넣기 -->
+<style>
+  @media (max-width: 768px) {
+    .feature-grid {
+      grid-template-columns: 1fr !important;
+    }
+    .feature-item span {
+      writing-mode: horizontal-tb !important;
+      white-space: normal !important;
+    }
+  }
+</style>
+ 
       <!-- 시스템 이름 강조 -->
       <div class="system-name" style="padding: 40px; background: rgba(255,255,255,0.1); border-radius: 20px; border: 2px solid rgba(255,215,0,0.3); text-align: center;">
         <p style="color: #fff; font-size: 1.2rem; line-height: 2;">
@@ -2787,21 +2800,35 @@
 
 <!-- ===== 플로팅 신청 버튼 & 스타일 (통째로 붙여넣기) ===== -->
 <style>
-  .floating-apply-button {
+  .floating-apply-button,
+  .floating-apply-button.cta-button {
     position: fixed !important;
-    bottom: 30px !important;
+    bottom: 20px !important;
     left: 50% !important;
     transform: translateX(-50%) !important;
     z-index: 999 !important;
 
-    /* 버튼 크기 고정 */
-    width: auto !important;
-    max-width: 360px !important;
-    white-space: nowrap !important;
-    text-align: center !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: fit-content !important;
+    max-width: none !important;
+    min-width: 0 !important;
 
-    /* 기존 CTA padding 강제 재적용 */
-    padding: 16px 48px !important;
+    /* 텍스트 크기 업, 패딩 그대로 유지 */
+    padding: 6px 12px !important;
+    font-size: 1.2rem !important;    /* ← 여기를 키워 텍스트를 크게 */
+    white-space: nowrap !important;
+  }
+
+  .floating-apply-button.cta-button {
+    background: var(--gradient-3) !important;
+    box-shadow: 0 10px 30px rgba(255,0,0,0.6) !important;
+  }
+
+  .floating-apply-button img {
+    height: 24px !important;         /* ← 로고 크기도 키웠습니다 */
+    margin-right: 8px !important;    /* 간격 살짝 늘림 */
   }
 </style>
 
@@ -2810,9 +2837,14 @@
   class="floating-apply-button cta-button cta-pulse"
   onclick="showModal()"
 >
- 인생을 바꾸는 첫걸음🖱️
+  <img src="https://i.ibb.co/YCDKB01/image.png" alt="로고">수강신청
 </a>
-<!-- ===== 여기까지 복사해서 기존 버튼 있던 곳에 붙여넣기 ===== -->
+<!-- ===== 여기까지 붙여넣기 ===== -->
+
+
+
+
+
 
     <!-- 모달 -->
     <div class="modal" id="applicationModal">
